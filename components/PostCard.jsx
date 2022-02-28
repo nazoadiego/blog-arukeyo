@@ -62,7 +62,7 @@ const PostCard = ({ post }) => {
       <div className="text-center">
         <Link href={`/post/${post.slug}`}>
           <span
-            className="inline-block transform rounded-full
+            className="inline-block transform cursor-pointer rounded-full
             bg-pink-600 px-4 py-2 text-lg font-medium
           text-white transition duration-500 hover:-translate-y-1"
           >
