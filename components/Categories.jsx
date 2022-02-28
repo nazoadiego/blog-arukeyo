@@ -11,13 +11,16 @@ const Categories = () => {
 
   return (
     <div className="mb-8 rounded-lg p-8 shadow-lg">
-      <h3 className="mb-8 border-b pb-4 text-xl font-semibold">
-        {categories.map((category) => (
-          <Link key={category.slug} href={`/category/${category.slug}`}>
-            {category.name}
-          </Link>
-        ))}
-      </h3>
+      <h3 className="mb-8 border-b pb-4 text-xl font-semibold">Categories</h3>
+      <div>
+        <ul className="grid grid-cols-2">
+          {categories.map((category) => (
+            <li key={category.slug}>
+              <Link href={`/category/${category.slug}`}>{category.name}</Link>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   )
 }

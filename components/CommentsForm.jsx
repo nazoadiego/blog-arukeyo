@@ -39,7 +39,7 @@ const CommentsForm = ({ slug }) => {
     }
   }
 
-  const handlePostSubmission = () => {
+  const handleSubmit = () => {
     setError(false)
     const { name, email, comment, storeData } = formData
     if (!name || !email || !comment) {
@@ -89,7 +89,7 @@ const CommentsForm = ({ slug }) => {
         <textarea
           value={formData.comment}
           onChange={onInputChange}
-          className="h-40 w-full rounded-lg bg-gray-100 p-4 text-gray-700 outline-none focus:ring-2 focus:ring-gray-200"
+          className="gray-input  h-40 p-4"
           name="comment"
           placeholder="Comment"
         />
@@ -99,7 +99,7 @@ const CommentsForm = ({ slug }) => {
           type="text"
           value={formData.name}
           onChange={onInputChange}
-          className="w-full rounded-lg bg-gray-100 py-2 px-4 text-gray-700 outline-none focus:ring-2 focus:ring-gray-200"
+          className="gray-input py-2 px-4"
           placeholder="Name"
           name="name"
         />
@@ -107,7 +107,7 @@ const CommentsForm = ({ slug }) => {
           type="email"
           value={formData.email}
           onChange={onInputChange}
-          className="w-full rounded-lg bg-gray-100 py-2 px-4 text-gray-700 outline-none focus:ring-2 focus:ring-gray-200"
+          className="gray-input py-2 px-4"
           placeholder="Email"
           name="email"
         />
@@ -134,8 +134,8 @@ const CommentsForm = ({ slug }) => {
       <div className="mt-8">
         <button
           type="button"
-          onClick={handlePostSubmission}
-          className="ease inline-block cursor-pointer rounded-full bg-pink-600 px-8 py-3 text-lg font-medium text-white transition duration-500 hover:bg-indigo-900"
+          onClick={handleSubmit}
+          className="ease btn-purple transition duration-500 hover:bg-pink-500"
         >
           Post Comment
         </button>

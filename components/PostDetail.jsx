@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
 import moment from 'moment'
+import Image from 'next/image'
 
 const PostDetail = ({ post }) => {
   return (
@@ -10,17 +11,18 @@ const PostDetail = ({ post }) => {
           <img
             src={post.featuredImage.url}
             alt=""
-            className="h-full w-full rounded-t-lg object-cover  object-top shadow-lg lg:rounded-lg"
+            className="h-full w-full rounded-t-lg object-cover object-top shadow-lg lg:rounded-lg"
           />
         </div>
         <div className="px-4 lg:px-0">
           <div className="mb-8 flex w-full items-center">
             <div className="mr-8 hidden items-center justify-center md:flex lg:mb-0 lg:w-auto">
-              <img
+              <Image
                 alt={post.author.name}
-                height="30px"
-                width="30px"
-                className="rounded-full align-middle"
+                unoptimized
+                height="80px"
+                width="80px"
+                className="rounded-full object-cover object-center"
                 src={post.author.photo.url}
               />
               <p className="ml-2 inline align-middle text-lg font-medium text-gray-700">
@@ -30,7 +32,7 @@ const PostDetail = ({ post }) => {
             <div className="font-medium text-gray-700">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="mr-2 inline h-6 w-6 text-pink-500"
+                className="mr-2 inline h-6 w-6 text-violet-500"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -47,7 +49,7 @@ const PostDetail = ({ post }) => {
               </span>
             </div>
           </div>
-          <div className="prose">
+          <div className="prose max-w-none">
             <ReactMarkdown>{post.content}</ReactMarkdown>
           </div>
         </div>

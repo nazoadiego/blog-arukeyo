@@ -1,38 +1,41 @@
 import React from 'react'
 import moment from 'moment'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const PostCard = ({ post }) => {
   return (
-    <div className="mb-8 rounded-lg p-0 pb-12 shadow-lg lg:p-8">
+    <div className="mb-8 rounded-lg pb-12 shadow-lg lg:p-8">
       <div className="relative mb-6 overflow-hidden pb-80 shadow-md">
-        <img
+        <Image
           src={post.featuredImage.url}
           alt={post.title}
-          className="absolute h-80 w-full
-            rounded-t-lg object-cover
+          unoptimized
+          layout="fill"
+          className="absolute rounded-t-lg object-cover
             object-top shadow-lg lg:rounded-lg"
         />
       </div>
-      <h2
-        className="mb-8 cursor-pointer
-      text-center text-3xl font-semibold
-      transition duration-700 hover:text-pink-600
-      "
-      >
-        <Link href={`/post/${post.slug}`}>{post.title}</Link>
-      </h2>
+      <Link href={`/post/${post.slug}`}>
+        <h2
+          className="duration-600 mb-8 cursor-pointer text-center
+      text-3xl font-semibold text-black transition hover:text-violet-600"
+        >
+          {post.title}
+        </h2>
+      </Link>
       <div
         className="mb-8 block w-full items-center
       justify-center text-center lg:flex"
       >
         <div className="mb-4 flex w-full items-center justify-center lg:mb-0 lg:w-auto">
-          <img
+          <Image
             src={post.author.photo.url}
             alt={post.author.name}
-            height="40px"
-            width="100px"
-            className="rounded-full align-middle"
+            unoptimized
+            height="50px"
+            width="50px"
+            className="rounded-full object-cover object-center"
           />
           <p className="inline align-middle text-gray-700">
             {post.author.name}
@@ -41,7 +44,7 @@ const PostCard = ({ post }) => {
         <div className="font-medium text-gray-700">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="mr-2 inline h-6 w-6 text-pink-500"
+            className="mr-2 inline h-6 w-6 text-violet-500"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -62,9 +65,8 @@ const PostCard = ({ post }) => {
       <div className="text-center">
         <Link href={`/post/${post.slug}`}>
           <span
-            className="inline-block transform cursor-pointer rounded-full
-            bg-pink-600 px-4 py-2 text-lg font-medium
-          text-white transition duration-500 hover:-translate-y-1"
+            className="btn-purple transform transition
+          duration-500 hover:-translate-y-1"
           >
             Continue Reading
           </span>

@@ -1,3 +1,55 @@
 @tailwind base;
+
+@layer base {
+  body {
+    @apply font-sans font-normal leading-relaxed;
+  }
+
+  h1 {
+    @apply text-4xl font-semibold;
+  }
+
+  h2 {
+    @apply text-3xl font-semibold;
+  }
+
+  h3 {
+    @apply text-2xl font-semibold;
+  }
+
+  h4 {
+    @apply text-xl font-semibold;
+  }
+
+  h5 {
+    @apply text-xl  font-semibold;
+  }
+
+  h5 {
+    @apply text-lg font-semibold;
+  }
+
+  h6 {
+    @apply text-base font-semibold;
+  }
+
+  a {
+    @apply text-violet-500;
+  }
+}
+
 @tailwind components;
+
+@layer components {
+  .gray-input {
+    @apply w-full rounded-lg bg-gray-100 text-gray-700
+    outline-none focus:ring-2 focus:ring-gray-200;
+  }
+
+  .btn-purple {
+    @apply inline-block cursor-pointer rounded-full bg-violet-600
+    px-4 py-2 text-lg font-medium text-white;
+  }
+}
+
 @tailwind utilities;

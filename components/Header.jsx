@@ -10,24 +10,39 @@ const Header = () => {
   }, [])
 
   return (
-    <div className="container mx-auto mb-8 px-10">
-      <div className="py8 inline-block w-full border-b border-blue-400">
-        <div className="block md:float-left">
+    <nav className="mb-4 flex items-center justify-center py-8">
+      <ul className="flex flex-wrap items-center justify-center">
+        <li className="mb-8 flex basis-full justify-center lg:order-2 lg:basis-auto">
           <Link href="/">
-            <span className="cursor-pointer text-4xl font-bold">Arukeyo</span>
+            <span className="mx-4 cursor-pointer text-6xl font-bold">
+              Arukeyo
+            </span>
           </Link>
-        </div>
-        <div className="hidden md:float-left md:contents">
-          {categories.map((category) => (
-            <Link key={category.slug} href={`/category/${category.slug}`}>
-              <span className="mt-2 ml-4 cursor-pointer align-middle font-semibold md:float-right">
-                {category.name}
-              </span>
-            </Link>
-          ))}
-        </div>
-      </div>
-    </div>
+        </li>
+        <li className="mx-2 pb-4 lg:order-1">
+          <Link href="/category/programming">
+            <span className="cursor-pointer text-2xl font-light">
+              Programming
+            </span>
+          </Link>
+        </li>
+        <li className="mx-2 pb-4 lg:order-1">
+          <Link href="/category/webdev">
+            <span className="cursor-pointer text-2xl font-light">Music</span>
+          </Link>
+        </li>
+        <li className="mx-2 pb-4 lg:order-3">
+          <Link href="/category/japanese">
+            <div className="cursor-pointer text-2xl font-light">Japanese</div>
+          </Link>
+        </li>
+        <li className="mx-2 pb-4 lg:order-3">
+          <Link href="/category/japanese">
+            <div className="cursor-pointer text-2xl font-light">Movies</div>
+          </Link>
+        </li>
+      </ul>
+    </nav>
   )
 }
 
