@@ -20,7 +20,7 @@ const PostCard = ({ post }) => {
       transition duration-700 hover:text-pink-600
       "
       >
-        <Link href={`post/${post.slug}`}>{post.title}</Link>
+        <Link href={`/post/${post.slug}`}>{post.title}</Link>
       </h2>
       <div
         className="mb-8 block w-full items-center
