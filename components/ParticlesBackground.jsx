@@ -117,13 +117,13 @@ const ParticlesBackground = () => {
             },
             density: 110,
             limit: {
-              radius: 150,
+              radius: 110,
               mass: 0,
             },
           },
           position: {
-            x: 20,
-            y: 50,
+            x: 30,
+            y: 40,
           },
         },
         emitters: [
@@ -178,6 +178,60 @@ const ParticlesBackground = () => {
             },
             position: {
               x: 100,
+              y: 0,
+            },
+          },
+          {
+            autoPlay: true,
+            fill: true,
+            life: {
+              wait: true,
+            },
+            rate: {
+              quantity: 1,
+              delay: 0.1,
+            },
+            shape: 'square',
+            startCount: 0,
+            direction: 'bottom-left',
+            particles: {
+              shape: {
+                type: 'circle',
+              },
+              color: {
+                value: '#000',
+              },
+              lineLinked: {
+                enable: false,
+              },
+              opacity: {
+                value: 1,
+              },
+              rotate: {
+                value: 0,
+                random: true,
+                direction: 'counter-clockwise',
+                animation: {
+                  enable: true,
+                  speed: 15,
+                  sync: true,
+                },
+              },
+              size: {
+                value: 10,
+                random: {
+                  enable: true,
+                  minimumValue: 5,
+                },
+              },
+              move: {
+                speed: 3,
+                random: false,
+                outMode: 'repulse',
+              },
+            },
+            position: {
+              x: 0,
               y: 0,
             },
           },

@@ -4,7 +4,7 @@ import { getCategories } from '../services'
 
 const Header = (props) => {
   return (
-    <nav className="flex items-center justify-center lg:mb-4 lg:py-8">
+    <nav className="m-2 flex items-center justify-center px-2 py-2">
       <ul className="flex flex-wrap items-center justify-center">
         <li
           onClick={props.navigateHome}
