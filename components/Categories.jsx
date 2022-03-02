@@ -10,7 +10,7 @@ const Categories = () => {
   }, [])
 
   return (
-    <div className="mb-8 rounded-lg p-8 shadow-lg">
+    <div className="mb-8 rounded-lg border border-gray-300 p-8 shadow-lg">
       <h3 className="mb-8 border-b pb-4 text-xl font-semibold">Categories</h3>
       <div>
         <ul className="grid grid-cols-2">
