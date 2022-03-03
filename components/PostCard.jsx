@@ -39,7 +39,9 @@ const PostCard = ({ post }) => {
           />
           <div className="ml-4 flex flex-col">
             <PostDate post={post} />
-            <h5 className="font-semibold text-gray-700">{post.author.name}</h5>
+            <h5 className="text-base font-light text-gray-400">
+              {post.author.name}
+            </h5>
           </div>
         </div>
       </div>

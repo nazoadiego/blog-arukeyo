@@ -3,7 +3,7 @@ import moment from 'moment'
 
 const PostDate = ({ post }) => {
   return (
-    <div className="flex items-center px-2 font-medium text-gray-700">
+    <div className="flex items-center font-medium text-gray-700">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         className="mr-2 inline h-6 w-6 text-violet-500"

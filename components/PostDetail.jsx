@@ -14,8 +14,8 @@ const PostDetail = ({ post }) => {
         />
       </div>
       <div className="px-4 lg:px-0">
-        <div className="mb-8 flex w-full items-center">
-          <div className="mr-8 hidden items-center justify-center md:flex lg:mb-0 lg:w-auto">
+        <div className="mb-4 flex w-full items-center">
+          <div className="mr-2 hidden items-center justify-center md:flex lg:mb-0 lg:w-auto">
             <Image
               alt={post.author.name}
               unoptimized
@@ -24,11 +24,13 @@ const PostDetail = ({ post }) => {
               className="rounded-full object-cover object-center"
               src={post.author.photo.url}
             />
-            <p className="ml-2 inline align-middle text-lg font-medium text-gray-700">
-              {post.author.name}
-            </p>
           </div>
-          <PostDate post={post} />
+          <div className="ml-2">
+            <PostDate post={post} />
+            <h5 className="inline align-middle text-base font-light text-gray-400">
+              by {post.author.name}
+            </h5>
+          </div>
         </div>
         <div className="prose max-w-none px-2">
           <ReactMarkdown>{post.content}</ReactMarkdown>
