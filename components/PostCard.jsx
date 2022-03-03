@@ -18,8 +18,8 @@ const PostCard = ({ post }) => {
       </div>
       <Link href={`/post/${post.slug}`}>
         <h2
-          className="duration-600 mb-8 cursor-pointer text-center
-          transition hover:text-violet-600"
+          className="duration-600 mb-8 cursor-pointer px-6 text-center text-xl transition
+          hover:text-violet-600 lg:text-4xl"
         >
           {post.title}
         </h2>
@@ -43,7 +43,7 @@ const PostCard = ({ post }) => {
           </div>
         </div>
       </div>
-      <p className="mb-8 px-4 text-center text-lg text-gray-600 lg:px-10">
+      <p className="mb-8 px-4 text-center text-base text-gray-600 lg:px-10 lg:text-lg">
         {post.excerpt}
       </p>
       <div className="text-center">

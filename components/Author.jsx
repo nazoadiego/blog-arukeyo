@@ -19,7 +19,13 @@ const Author = ({ author }) => {
         />
       </div>
       <h3 className="mt-4 mb-4 text-2xl font-bold text-white">{author.name}</h3>
-      <p className="text-xl text-white">{author.bio}</p>
+      <p className="text-ellipsis text-sm text-white">{author.bio}</p>
+      <a
+        href="https://nazoadiego.github.io/portfolio/"
+        className="font-semibold text-violet-800 underline underline-offset-2"
+      >
+        Nzoa's Portfolio
+      </a>
     </div>
   )
 }
