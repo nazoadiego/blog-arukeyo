@@ -30,7 +30,7 @@ const PostDetail = ({ post }) => {
           </div>
           <PostDate post={post} />
         </div>
-        <div className="prose max-w-none">
+        <div className="prose max-w-none px-2">
           <ReactMarkdown>{post.content}</ReactMarkdown>
         </div>
       </div>
