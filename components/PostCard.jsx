@@ -11,6 +11,7 @@ const PostCard = ({ post }) => {
           src={post.featuredImage.url}
           alt={post.title}
           unoptimized
+          priority
           layout="fill"
           className="absolute rounded-t-lg object-cover
             object-top shadow-lg lg:rounded-lg"
