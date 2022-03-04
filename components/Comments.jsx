@@ -9,7 +9,8 @@ const Comments = ({ slug }) => {
 
   useEffect(() => {
     getComments(slug).then((result) => {
-      setComments(result)
+      const reversedComments = result.slice(0).reverse()
+      setComments(reversedComments)
     })
   }, [])
 

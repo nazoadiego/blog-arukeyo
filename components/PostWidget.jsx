@@ -9,11 +9,15 @@ const PostWidget = ({ categories, slug }) => {
 
   useEffect(() => {
     if (slug) {
-      getSimilarPosts(categories, slug).then((result) =>
-        setRelatedPosts(result)
-      )
+      getSimilarPosts(categories, slug).then((result) => {
+        const reversedPosts = result.slice(0).reverse()
+        setRelatedPosts(reversedPosts)
+      })
     } else {
-      getRecentPosts().then((result) => setRelatedPosts(result))
+      getRecentPosts().then((result) => {
+        const reversedPosts = result.slice(0).reverse()
+        setRelatedPosts(reversedPosts)
+      })
     }
   }, [slug])
 
@@ -22,7 +26,7 @@ const PostWidget = ({ categories, slug }) => {
       <h3 className="mb-8 border-b pb-4 text-xl font-semibold">
         {slug ? 'Related Posts' : 'Recent Posts'}
       </h3>
-      {relatedPosts.map((post) => (
+      {relatedPosts.slice(0, 5).map((post) => (
         <div key={post.title} className="mb-4 flex w-full items-center">
           <div className="w-16 flex-none">
             <Image
