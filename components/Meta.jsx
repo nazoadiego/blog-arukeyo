@@ -17,7 +17,8 @@ const Meta = () => {
       <meta property="og:title" content="Arukeyo" key="ogtitle" />
       <meta
         property="og:description"
-        content="Nzoa's personal blog about programming, Japanese and more."
+        content="Nzoa's personal blog about programming, Japanese,
+        music, and movies. Made in NextJS and integrated with GraphCMS"
         key="ogdesc"
       />
     </>
