@@ -7,15 +7,17 @@ const PostCard = ({ post }) => {
   return (
     <div className="mb-8 rounded-lg border border-gray-300 pb-12 shadow-lg lg:p-8 lg:pb-12">
       <div className="relative mb-6 overflow-hidden pb-80 shadow-md">
-        <Image
-          src={post.featuredImage.url}
-          alt={post.title}
-          unoptimized
-          priority
-          layout="fill"
-          className="absolute rounded-t-lg object-cover
-            object-top shadow-lg lg:rounded-lg"
-        />
+        <Link href={`/post/${post.slug}`}>
+          <Image
+            src={post.featuredImage.url}
+            alt={post.title}
+            unoptimized
+            priority
+            layout="fill"
+            className="absolute cursor-pointer rounded-t-lg
+          object-cover object-top shadow-lg lg:rounded-lg"
+          />
+        </Link>
       </div>
       <Link href={`/post/${post.slug}`}>
         <h2
