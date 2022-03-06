@@ -15,25 +15,31 @@ const Header = () => {
         </li>
         <li className="mx-2 pb-4 lg:order-1">
           <Link href="/category/programming">
-            <span className="cursor-pointer text-2xl font-light">
+            <span className="underline-drop cursor-pointer text-2xl font-light">
               Programming
             </span>
           </Link>
         </li>
         <li className="mx-2 pb-4 lg:order-1">
           <Link href="/category/music">
-            <span className="cursor-pointer text-2xl font-light">Music</span>
+            <span className="underline-drop cursor-pointer text-2xl font-light">
+              Music
+            </span>
           </Link>
         </li>
         <li className="mx-2 pb-4 lg:order-3">
           <Link href="/category/japanese">
-            <div className="cursor-pointer text-2xl font-light">Japanese</div>
+            <div className="underline-drop cursor-pointer text-2xl font-light">
+              Japanese
+            </div>
           </Link>
         </li>
 
         <li className="mx-2 pb-4 lg:order-3">
           <Link href="/category/movies">
-            <div className="cursor-pointer text-2xl font-light">Movies</div>
+            <div className="underline-drop cursor-pointer text-2xl font-light">
+              Movies
+            </div>
           </Link>
         </li>
       </ul>
