@@ -78,7 +78,7 @@ Here's why I decided to create it:
 * I wanted to learn a project where the content and the code were separate, so that both can be updated and expanded upon on without interfering with each other.
 * I wanted to publish my articles directly from Markdown (which I LOVE).
 * Because it's nice to have a corner in the internet where I can share my thoughts and things I like.
-* To have playground where I can learn more about accesibility, performance and SEO.
+* To have a place where I can apply what I learn about accesibility, performance and SEO.
 
 
 Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
