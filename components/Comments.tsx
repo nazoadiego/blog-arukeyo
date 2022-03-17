@@ -15,7 +15,6 @@ interface CommentsProps {
 }
 
 const Comments: FC<CommentsProps> = ({ slug }) => {
-  console.log(slug)
   const [comments, setComments] = useState<Comment[]>([])
 
   useEffect(() => {

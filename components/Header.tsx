@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { FC } from 'react'
 import Link from 'next/link'
-import { getCategories } from '../services'
+// import { getCategories } from '../services'
 
-const Header = () => {
+const Header: FC = () => {
   return (
     <nav className="m-2 flex items-center justify-center px-2 py-2">
       <ul className="flex flex-wrap items-center justify-center">

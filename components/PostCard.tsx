@@ -1,10 +1,22 @@
-import React from 'react'
+import React, { FC } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { PostDate } from '.'
 import { motion } from 'framer-motion'
 
-const PostCard = ({ post }) => {
+interface PostCardProps {
+  post: {
+    author: { bio: string; name: string; id: string; photo: { url: string } }
+    createdAt: string
+    excerpt: string
+    categories: { name: string; slug: string }[]
+    featuredImage: { url: string }
+    slug: string
+    title: string
+  }
+}
+
+const PostCard: FC<PostCardProps> = ({ post }) => {
   return (
     <motion.div className="mb-8 rounded-lg border border-gray-300 pb-12 shadow-lg lg:p-8 lg:pb-12">
       <div className="relative mb-6 overflow-hidden pb-80 shadow-md">

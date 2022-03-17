@@ -1,7 +1,14 @@
 import React from 'react'
 import moment from 'moment'
+import { FC } from 'react'
 
-const PostDate = ({ post }) => {
+interface PostDateProps {
+  post: {
+    createdAt: string
+  }
+}
+
+const PostDate: FC<PostDateProps> = ({ post }) => {
   return (
     <div className="flex items-center font-medium text-gray-700">
       <svg

@@ -2,8 +2,22 @@ import React from 'react'
 import ReactMarkdown from 'react-markdown'
 import Image from 'next/image'
 import { PostDate } from '.'
+import { FC } from 'react'
 
-const PostDetail = ({ post }) => {
+interface PostDetailProps {
+  post: {
+    author: { bio: string; name: string; id: string; photo: { url: string } }
+    createdAt: string
+    excerpt: string
+    categories: { name: string; slug: string }[]
+    featuredImage: { url: string }
+    slug: string
+    title: string
+    content: string
+  }
+}
+
+const PostDetail: FC<PostDetailProps> = ({ post }) => {
   return (
     <div className="mb-8 rounded-lg border border-gray-300 bg-white pb-12 shadow-lg lg:p-12 lg:pb-20">
       <div className="relative mb-6 overflow-hidden shadow-md">
