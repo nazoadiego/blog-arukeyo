@@ -1,7 +1,16 @@
 import React from 'react'
 import Image from 'next/image'
+import { FC } from 'react'
 
-const Author = ({ author }) => {
+interface AuthorProps {
+  author: {
+    bio: string
+    name: string
+    photo: { url: string }
+  }
+}
+
+const Author: FC<AuthorProps> = ({ author }) => {
   return (
     <div
       className="relative mt-20 mb-8 rounded-lg border

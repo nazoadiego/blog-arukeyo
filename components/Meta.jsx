@@ -3,7 +3,7 @@ import React from 'react'
 const Meta = () => {
   return (
     <>
-      <meta charset="utf-8"></meta>
+      <meta charSet="utf-8"></meta>
       {/* Twitter */}
       <meta
         name="twitter:card"
