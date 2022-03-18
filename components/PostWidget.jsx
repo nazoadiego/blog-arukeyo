@@ -1,18 +1,36 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, FC } from 'react'
 import moment from 'moment'
 import Link from 'next/link'
 import Image from 'next/image'
 import { getRecentPosts, getSimilarPosts } from '../services'
 
+// interface Category {
+//   name: string
+//   slug: string
+// }
+
+// interface Post {
+//   author: { bio: string; name: string; id: string; photo: { url: string } }
+//   createdAt: string
+//   excerpt: string
+//   categories: { name: string; slug: string }[]
+//   featuredImage: { url: string }
+//   slug: string
+//   title: string
+// }
+
 const PostWidget = ({ categories, slug }) => {
+  // const [relatedPosts, setRelatedPosts] = useState<Post[]>([])
   const [relatedPosts, setRelatedPosts] = useState([])
 
   useEffect(() => {
     if (slug) {
+      // getSimilarPosts(categories, slug).then((result: Post[]) => {
       getSimilarPosts(categories, slug).then((result) => {
         setRelatedPosts(result)
       })
     } else {
+      // getRecentPosts().then((result: Post[]) => {
       getRecentPosts().then((result) => {
         setRelatedPosts(result)
       })
@@ -43,8 +61,8 @@ const PostWidget = ({ categories, slug }) => {
               <p className="font-xs text-gray-500">
                 {moment(post.createdAt).format('MMM DD, YYYY')}
               </p>
-              <Link href={`/post/${post.slug}`} className="text-md">
-                {post.title}
+              <Link href={`/post/${post.slug}`}>
+                <a className="text-md">{post.title}</a>
               </Link>
             </div>
           </div>

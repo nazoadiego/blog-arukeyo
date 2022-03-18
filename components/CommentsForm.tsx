@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import { submitComment } from '../services'
 
-const CommentsForm = ({ slug }) => {
+interface Event {
+  target: { name: string; value: string }
+}
+
+const CommentsForm = ({ slug }: { slug: string }) => {
   const [error, setError] = useState(false)
   const [showSuccessMessage, setShowSuccessMessage] = useState(false)
   const [formData, setFormData] = useState({
@@ -10,7 +14,7 @@ const CommentsForm = ({ slug }) => {
     comment: '',
   })
 
-  const onInputChange = (e) => {
+  const onInputChange = (e: Event) => {
     const { target } = e
     setFormData((prevState) => ({
       ...prevState,

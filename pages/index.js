@@ -1,7 +1,7 @@
 import ParticlesBackground from '../components/ParticlesBackground'
 import { Header } from '../components'
 
-const Home = ({ posts }) => {
+const Home = () => {
   return (
     <>
       <ParticlesBackground />

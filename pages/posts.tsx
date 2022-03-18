@@ -1,7 +1,24 @@
 import { PostCard, Categories, PostWidget, Layout } from '../components'
 import { getPosts } from '../services'
+import { FC } from 'react'
 
-const Home = ({ posts }) => {
+interface Post {
+  node: {
+    author: { bio: string; name: string; id: string; photo: { url: string } }
+    createdAt: string
+    excerpt: string
+    categories: { name: string; slug: string }[]
+    featuredImage: { url: string }
+    slug: string
+    title: string
+  }
+}
+
+interface HomeProps {
+  posts: Post[]
+}
+
+const Home: FC<HomeProps> = ({ posts }) => {
   return (
     <Layout>
       <div className="container mx-auto mb-8 px-4 lg:px-10">
