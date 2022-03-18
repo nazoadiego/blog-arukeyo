@@ -3,8 +3,9 @@ import '../styles/globals.css'
 import '../styles/application.scss'
 import Head from 'next/head'
 import Meta from '../components/Meta'
+import type { AppProps } from 'next/app'
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
