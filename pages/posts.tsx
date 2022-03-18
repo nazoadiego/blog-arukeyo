@@ -1,6 +1,6 @@
 import { PostCard, Categories, PostWidget, Layout } from '../components'
 import { getPosts } from '../services'
-import { FC } from 'react'
+import type { NextPage } from 'next'
 
 interface Post {
   node: {
@@ -18,7 +18,7 @@ interface HomeProps {
   posts: Post[]
 }
 
-const Home: FC<HomeProps> = ({ posts }) => {
+const Home: NextPage<HomeProps> = ({ posts }) => {
   return (
     <Layout>
       <div className="container mx-auto mb-8 px-4 lg:px-10">
