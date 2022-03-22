@@ -19,7 +19,8 @@ import { getRecentPosts, getSimilarPosts } from '../services'
 //   title: string
 // }
 
-const PostWidget = ({ categories, slug }) => {
+const PostWidget = (props) => {
+  const { categories, slug } = props
   // const [relatedPosts, setRelatedPosts] = useState<Post[]>([])
   const [relatedPosts, setRelatedPosts] = useState([])
 
