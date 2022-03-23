@@ -1,7 +1,8 @@
 import ParticlesBackground from '../components/ParticlesBackground'
 import { Header } from '../components'
+import { NextPage } from 'next'
 
-const Home = () => {
+const Home: NextPage = () => {
   return (
     <>
       <ParticlesBackground />
