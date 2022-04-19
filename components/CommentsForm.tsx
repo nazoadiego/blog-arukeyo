@@ -50,7 +50,7 @@ const CommentsForm = ({ slug }: { slug: string }) => {
         <textarea
           value={formData.comment}
           onChange={onInputChange}
-          className="gray-input  h-40 p-4"
+          className="gray-input h-40 p-4"
           name="comment"
           placeholder="Comment"
         />
