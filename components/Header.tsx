@@ -8,38 +8,36 @@ const Header: FC = () => {
       <ul className="flex flex-wrap items-center justify-center">
         <li className="mb-8 flex basis-full justify-center lg:order-2 lg:basis-auto">
           <Link href="/posts">
-            <span className="mx-4 cursor-pointer text-6xl font-bold">
-              Arukeyo
-            </span>
+            <a className="mx-4 cursor-pointer text-6xl font-bold">Arukeyo</a>
           </Link>
         </li>
         <li className="mx-2 pb-4 lg:order-1">
           <Link href="/category/programming">
-            <span className="underline-drop cursor-pointer text-2xl font-light">
+            <a className="underline-drop cursor-pointer text-2xl font-light">
               Programming
-            </span>
+            </a>
           </Link>
         </li>
         <li className="mx-2 pb-4 lg:order-1">
           <Link href="/category/music">
-            <span className="underline-drop cursor-pointer text-2xl font-light">
+            <a className="underline-drop cursor-pointer text-2xl font-light">
               Music
-            </span>
+            </a>
           </Link>
         </li>
         <li className="mx-2 pb-4 lg:order-3">
           <Link href="/category/japanese">
-            <div className="underline-drop cursor-pointer text-2xl font-light">
+            <a className="underline-drop cursor-pointer text-2xl font-light">
               Japanese
-            </div>
+            </a>
           </Link>
         </li>
 
         <li className="mx-2 pb-4 lg:order-3">
           <Link href="/category/movies">
-            <div className="underline-drop cursor-pointer text-2xl font-light">
+            <a className="underline-drop cursor-pointer text-2xl font-light">
               Movies
-            </div>
+            </a>
           </Link>
         </li>
       </ul>

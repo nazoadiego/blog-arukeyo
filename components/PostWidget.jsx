@@ -63,7 +63,7 @@ const PostWidget = (props) => {
                 {moment(post.createdAt).format('MMM DD, YYYY')}
               </p>
               <Link href={`/post/${post.slug}`}>
-                <a className="text-md">{post.title}</a>
+                <a className="text-md purple-link">{post.title}</a>
               </Link>
             </div>
           </div>

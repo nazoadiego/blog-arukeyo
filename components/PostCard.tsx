@@ -35,12 +35,12 @@ const PostCard: FC<PostCardProps> = ({ post }) => {
         </Link>
       </div>
       <Link href={`/post/${post.slug}`}>
-        <h2
+        <a
           className="duration-600 mb-8 cursor-pointer px-6 text-center text-xl transition
           hover:text-violet-600 lg:text-4xl"
         >
           {post.title}
-        </h2>
+        </a>
       </Link>
       <div
         className="mb-8 block w-full items-center
@@ -68,12 +68,12 @@ const PostCard: FC<PostCardProps> = ({ post }) => {
       </p>
       <div className="text-center">
         <Link href={`/post/${post.slug}`}>
-          <span
+          <a
             className="btn-purple transform transition
           duration-500 hover:-translate-y-1"
           >
             Continue Reading
-          </span>
+          </a>
         </Link>
       </div>
     </motion.div>

@@ -32,10 +32,6 @@
   h6 {
     @apply text-base font-semibold;
   }
-
-  a {
-    @apply text-violet-500;
-  }
 }
 
 @tailwind components;
@@ -53,3 +49,9 @@
 }
 
 @tailwind utilities;
+
+@layer utilities {
+  .purple-link {
+    @apply text-violet-500;
+  }
+}

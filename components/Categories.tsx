@@ -21,7 +21,9 @@ const Categories = () => {
         <ul className="grid grid-cols-2 gap-x-4">
           {categories.map((category) => (
             <li key={category.slug}>
-              <Link href={`/category/${category.slug}`}>{category.name}</Link>
+              <Link href={`/category/${category.slug}`}>
+                <a className="purple-link">{category.name}</a>
+              </Link>
             </li>
           ))}
         </ul>
