@@ -55,7 +55,7 @@ const PostWidget = (props) => {
                 unoptimized
                 height="60px"
                 width="60px"
-                className="rounded-full align-middle"
+                className="rounded-full object-cover align-middle"
               />
             </div>
             <div className="ml-4 flex-grow">

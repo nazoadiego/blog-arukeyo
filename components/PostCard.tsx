@@ -36,8 +36,8 @@ const PostCard: FC<PostCardProps> = ({ post }) => {
       </div>
       <Link href={`/post/${post.slug}`}>
         <a
-          className="duration-600 mb-8 cursor-pointer px-6 text-center text-xl transition
-          hover:text-violet-600 lg:text-4xl"
+          className="duration-600 mb-8 block cursor-pointer px-6 text-center text-xl
+          transition hover:text-violet-600 lg:text-4xl"
         >
           {post.title}
         </a>
@@ -69,8 +69,8 @@ const PostCard: FC<PostCardProps> = ({ post }) => {
       <div className="text-center">
         <Link href={`/post/${post.slug}`}>
           <a
-            className="btn-purple transform transition
-          duration-500 hover:-translate-y-1"
+            className="btn-purple transform
+          transition duration-500 hover:-translate-y-1"
           >
             Continue Reading
           </a>
